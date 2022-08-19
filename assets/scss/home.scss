@@ -105,7 +105,74 @@ body {
             position: absolute;
             content: "";
             background-image: linear-gradient(#161618, #16161890);
-            z-index: 0;
+        }
+
+        .destak {
+            position: relative;
+            padding-top: 100px;
+            color: white;
+            height: 100vh;
+
+            .title {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: calc(100vh - 200px);
+
+                h1 {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 50px;
+
+                    span {
+                        font-family: "Rock Salt";
+                        font-size: 150px;
+                    }
+                }
+
+                h2 {
+                    display: none;
+                }
+            }
+
+            .links {
+                background-color: #131C21;
+                opacity: .8;
+                height: 100px;
+
+                .link-item {
+                    display: none;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+
+                    svg {
+                        fill: #FFF;
+                        margin-right: 22px;
+                        height: 48px;
+                        width: 48px;
+                    }
+
+                    h3,
+                    h4 {
+                        font-weight: 300;
+                    }
+
+                    h3 {
+                        font-size: 25px;
+                    }
+
+                    h4 {
+                        font-size: 15px;
+                    }
+
+                    &:first-child {
+                        display: flex;
+                    }
+                }
+            }
         }
     }
 
