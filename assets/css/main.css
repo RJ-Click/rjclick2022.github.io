@@ -73,6 +73,25 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   src: url("/assets/fonts/Lato/Lato-Light.ttf") format("truetype");
 }
+body {
+  font-family: "Lato";
+}
+body .hide-mobile {
+  display: none;
+}
+body .show-desktop {
+  display: none;
+}
+body a {
+  color: #fff;
+  text-decoration: none;
+}
+body ul {
+  padding: 0;
+}
+body ul li {
+  list-style: none;
+}
 body.open > header .menu-links {
   right: 0;
 }
@@ -90,6 +109,8 @@ body > header .mobile-content {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin: 0 25px;
 }
 body > header .mobile-content a#close-button {
   position: relative;
@@ -123,6 +144,38 @@ body > header .menu-links ul {
 }
 body > header .menu-links ul li + li {
   margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  body .show-desktop {
+    display: block;
+  }
+  body .max-width {
+    max-width: 700px !important;
+  }
+  body header .search {
+    position: relative;
+  }
+  body header .search .path {
+    fill: #fff;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 24px;
+  }
+  body header .search input {
+    width: 500px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1882352941);
+    color: #fff;
+    padding-left: 50px;
+    outline: 0;
+    border: none;
+    border-radius: 20px;
+  }
+  body header .search input::placeholder {
+    color: #fff;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,6 +5,24 @@
 // DRY - Don't Repeat Yourself
 body{
 
+    font-family: "Lato";
+    .hide-mobile {
+        display: none;
+    }
+    .show-desktop {
+        display: none;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    ul {
+        padding: 0;
+        li {
+            list-style: none;
+        }
+    }
     &.open {
         > header {
             .menu-links{
@@ -25,6 +43,8 @@ body{
             width: 100%;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            margin: 0 25px;
             a#close-button {
                 position: relative;
                 z-index: 2;
@@ -61,3 +81,55 @@ body{
         }
      }
 }
+// 3 coisas formam o pilar do Responsive Web Design.
+// 1 - O site deve ser capaz de renderizar o site em dispositivos móveis. - meta viewport.
+// 2 - Definir os breakpoints para cada dispositivo. - media queries.
+// 3 - Definir o que muda, quando muda e como muda. - dentro media queries.
+
+// mobile first -  Comece com o mobile.
+// tablet
+@media (min-width: 768px){
+    body {
+        .show-desktop {
+            display: block;
+        }
+        .max-width {
+            max-width: 700px!important;
+        }
+        header {
+            .search {
+                position: relative;
+                .path {
+                    fill: #fff;
+                    position: absolute;
+                    top: 10px;
+                    left: 15px;
+                    width: 24px;
+                }
+                input {
+                    width: 500px;
+                    height: 40px;
+                    background-color: #ffffff30;
+                    color: #fff;
+                    padding-left: 50px;
+                    outline: 0;
+                    border: none;
+                    border-radius: 20px;
+                    &::placeholder {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+// desktop e monitores maiores.
+@media (min-width:1200px){
+
+}
+// 4k e monitores Apple - iMac, Macbook, Mac Pro, etc.
+// @media (min-width:2520px){
+
+// }
+
+// Nos EUA monitores corporativos - 1100x 768, 1333x768, 1440x900, 1600x1200, etc.
