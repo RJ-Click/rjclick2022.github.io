@@ -83,6 +83,7 @@ body section.hero::before {
   position: absolute;
   content: "";
   background-image: linear-gradient(#161618, rgba(22, 22, 24, 0.5647058824));
+  z-index: 0;
 }
 
 @media (min-width: 768px) {

@@ -7,5 +7,9 @@
   font-weight: 200;
   src: url("/assets/fonts/Lato/Lato-Light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Rock Salt";
+  src: url("/assets/fonts/Lato/RockSalt-Regular.ttf") format("truetype");
+}
 
 /*# sourceMappingURL=fonts.css.map */

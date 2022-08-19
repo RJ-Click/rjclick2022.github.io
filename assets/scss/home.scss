@@ -1,17 +1,19 @@
-
 // div, section,header {
 //     display: flex;
 // }
 // DRY - Don't Repeat Yourself
-body{
+body {
 
     font-family: "Lato";
+
     .hide-mobile {
         display: none;
     }
+
     .show-desktop {
         display: none;
     }
+
     a {
         color: #fff;
         text-decoration: none;
@@ -19,40 +21,47 @@ body{
 
     ul {
         padding: 0;
+
         li {
             list-style: none;
         }
     }
+
     &.open {
-        > header {
-            .menu-links{
+        >header {
+            .menu-links {
                 right: 0;
             }
         }
     }
-    > header {
+
+    >header {
         height: 100px;
         width: 100%;
         background-color: #161618;
         border-bottom: 2px solid #ccc;
         position: fixed;
-        z-index:2;
+        z-index: 2;
         display: flex;
         align-items: center;
+
         .mobile-content {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin: 0 25px;
+
             a#close-button {
                 position: relative;
                 z-index: 2;
             }
+
             .nav-desktop {
                 display: none;
             }
         }
+
         .menu-links {
             transition-duration: 0.2s;
             transition-timing-function: ease-out;
@@ -62,38 +71,44 @@ body{
             top: 0;
             right: -300px;
             background-color: #CACAD2;
-            > a {
+
+            >a {
                 margin: 15px;
                 width: 48px;
                 height: 48px;
                 float: right;
             }
+
             ul {
                 margin: 150px 0;
                 text-align: center;
                 padding: 0;
                 font-size: 18px;
                 list-style: none;
-                li + li {
+
+                li+li {
                     margin-top: 40px;
                 }
             }
         }
-     }
-     section.hero {
+    }
+
+    section.hero {
         background-image: url("../images/background-banner-smartphone.webp");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
         height: 100vh;
+
         &::before {
             width: 100%;
             height: 100%;
             position: absolute;
             content: "";
             background-image: linear-gradient(#161618, #16161890);
+            z-index: 0;
         }
-     }
+    }
 
 
 }
@@ -109,17 +124,20 @@ body{
 
 // mobile first -  Comece com o mobile.
 // tablet
-@media (min-width: 768px){
+@media (min-width: 768px) {
     body {
         .show-desktop {
             display: block;
         }
+
         .max-width {
-            max-width: 700px!important;
+            max-width: 700px !important;
         }
+
         header {
             .search {
                 position: relative;
+
                 .path {
                     fill: #fff;
                     position: absolute;
@@ -127,6 +145,7 @@ body{
                     left: 15px;
                     width: 24px;
                 }
+
                 input {
                     width: 500px;
                     height: 40px;
@@ -136,6 +155,7 @@ body{
                     outline: 0;
                     border: none;
                     border-radius: 20px;
+
                     &::placeholder {
                         color: #fff;
                     }
@@ -144,24 +164,26 @@ body{
         }
 
         section.hero {
-        background-image: url("../images/background-banner-tablet.webp");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
+            background-image: url("../images/background-banner-tablet.webp");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
         }
     }
 }
+
 // desktop e monitores maiores.
-@media (min-width:1200px){
-body {
-    section.hero {
-        background-image: url("../images/background-banner-desktop.webp");
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: cover;
+@media (min-width:1200px) {
+    body {
+        section.hero {
+            background-image: url("../images/background-banner-desktop.webp");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
         }
     }
 }
+
 // 4k e monitores Apple - iMac, Macbook, Mac Pro, etc.
 // @media (min-width:2520px){
 
