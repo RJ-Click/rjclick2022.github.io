@@ -80,7 +80,28 @@ body{
             }
         }
      }
+     section.hero {
+        background-image: url("../images/background-banner-smartphone.webp");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        &::before {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: "";
+            background-image: linear-gradient(#161618, #16161890);
+        }
+     }
+
+
 }
+
+
+
+
+
 // 3 coisas formam o pilar do Responsive Web Design.
 // 1 - O site deve ser capaz de renderizar o site em dispositivos móveis. - meta viewport.
 // 2 - Definir os breakpoints para cada dispositivo. - media queries.
@@ -121,11 +142,25 @@ body{
                 }
             }
         }
+
+        section.hero {
+        background-image: url("../images/background-banner-tablet.webp");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        }
     }
 }
 // desktop e monitores maiores.
 @media (min-width:1200px){
-
+body {
+    section.hero {
+        background-image: url("../images/background-banner-desktop.webp");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        }
+    }
 }
 // 4k e monitores Apple - iMac, Macbook, Mac Pro, etc.
 // @media (min-width:2520px){
