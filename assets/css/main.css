@@ -160,7 +160,7 @@ body section.hero::before {
   height: 100%;
   position: absolute;
   content: "";
-  background-image: linear-gradient(#161618, rgba(22, 22, 24, 0.5647058824));
+  background-image: linear-gradient(#161618, rgba(22, 22, 24, 0));
 }
 body section.hero .destak {
   position: relative;
@@ -175,22 +175,26 @@ body section.hero .destak .title {
   justify-content: center;
   height: calc(100vh - 200px);
 }
-body section.hero .destak .title h1 {
+body section.hero .destak .title .wrapper h1 {
   display: flex;
   flex-direction: column;
   font-size: 50px;
 }
-body section.hero .destak .title h1 span {
+body section.hero .destak .title .wrapper h1 span {
   font-family: "Rock Salt";
   font-size: 150px;
 }
-body section.hero .destak .title h2 {
+body section.hero .destak .title .wrapper h2 {
   display: none;
 }
 body section.hero .destak .links {
   background-color: #131C21;
   opacity: 0.8;
   height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 body section.hero .destak .links .link-item {
   display: none;
@@ -198,6 +202,7 @@ body section.hero .destak .links .link-item {
   justify-content: center;
   align-items: center;
   height: 100%;
+  color: #F2B822;
 }
 body section.hero .destak .links .link-item svg {
   fill: #FFF;
@@ -208,15 +213,24 @@ body section.hero .destak .links .link-item svg {
 body section.hero .destak .links .link-item h3,
 body section.hero .destak .links .link-item h4 {
   font-weight: 300;
+  margin: 0;
+  line-height: 1;
 }
 body section.hero .destak .links .link-item h3 {
   font-size: 25px;
+  margin-bottom: 2px;
 }
 body section.hero .destak .links .link-item h4 {
   font-size: 15px;
+  line-height: 15px;
 }
 body section.hero .destak .links .link-item:first-child {
   display: flex;
+}
+body section.hero .destak .links .arrow {
+  margin-left: 10px;
+  position: absolute;
+  right: 0;
 }
 
 @media (min-width: 768px) {
@@ -255,6 +269,43 @@ body section.hero .destak .links .link-item:first-child {
     background-position: center center;
     background-size: cover;
   }
+  body section.hero .destak .title {
+    position: relative;
+  }
+  body section.hero .destak .title .wrapper {
+    position: relative;
+  }
+  body section.hero .destak .title .wrapper h1 {
+    flex-direction: row;
+    align-items: center;
+    font-size: 100px;
+  }
+  body section.hero .destak .title .wrapper h1 span {
+    margin-left: 45px;
+  }
+  body section.hero .destak .title .wrapper h2 {
+    position: absolute;
+    display: flex;
+    bottom: 25px;
+    left: 100px;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+  body section.hero .destak .links .link-item h3 {
+    font-size: 30px;
+  }
+  body section.hero .destak .links .link-item h4 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  body section.hero .destak .links .link-item:nth-child(2) {
+    display: flex;
+    margin-left: 36px;
+  }
+  body section.hero .destak .arrow {
+    position: absolute;
+    right: 0;
+  }
 }
 @media (min-width: 1200px) {
   body section.hero {
@@ -262,6 +313,31 @@ body section.hero .destak .links .link-item:first-child {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+  }
+  body section.hero .destak .links .link-item {
+    color: #FFF;
+  }
+  body section.hero .destak .links .link-item h3 {
+    font-size: 28px;
+  }
+  body section.hero .destak .links .link-item svg path {
+    fill: #FFF;
+  }
+  body section.hero .destak .links .link-item.selected {
+    color: #F2B822;
+  }
+  body section.hero .destak .links .link-item.selected svg path {
+    fill: #F2B822;
+  }
+  body section.hero .destak .links .link-item:nth-child(3), body section.hero .destak .links .link-item:nth-child(4) {
+    display: flex;
+    margin-left: 36px;
+  }
+  body section.hero .destak .links .link-item:last-child {
+    margin-left: 36px;
+  }
+  body section.hero .destak .arrow {
+    display: none;
   }
 }
 
