@@ -15,7 +15,7 @@ body {
     }
 
     a {
-        color: #fff;
+        color: var(--text);
         text-decoration: none;
     }
 
@@ -110,7 +110,7 @@ body {
         .destak {
             position: relative;
             padding-top: 100px;
-            color: white;
+            color: var(--text);
             height: 100vh;
 
             .title {
@@ -120,20 +120,26 @@ body {
                 justify-content: center;
                 height: calc(100vh - 200px);
 
-                .wrapper {
-                    h1 {
-                        display: flex;
-                        flex-direction: column;
-                        font-size: 50px;
-
-                        span {
-                            font-family: "Rock Salt";
-                            font-size: 150px;
-                        }
+                .wrapper_content {
+                    .index_slider {
+                        display: none;
                     }
 
-                    h2 {
-                        display: none;
+                    .wrapper_title {
+                        h1 {
+                            display: flex;
+                            flex-direction: column;
+                            font-size: 50px;
+
+                            span {
+                                font-family: "Rock Salt";
+                                font-size: 150px;
+                            }
+                        }
+
+                        h2 {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -153,10 +159,10 @@ body {
                     justify-content: center;
                     align-items: center;
                     height: 100%;
-                    color: #F2B822;
+                    color: var(--main);
 
                     svg {
-                        fill: #FFF;
+                        fill: var(--text);
                         margin-right: 22px;
                         height: 48px;
                         width: 48px;
@@ -166,7 +172,6 @@ body {
                     h4 {
                         font-weight: 300;
                         margin: 0;
-                        line-height: 1;
                     }
 
                     h3 {
@@ -193,7 +198,106 @@ body {
         }
     }
 
+    section.wonders {
+        padding: 48px;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-size: 44px;
+                margin-top: 23px;
+                text-align: center;
+
+                @media (min-width: 768px) {
+                    font-size: 48px;
+                }
+            }
+
+            hr {
+                border: 0;
+                width: 100px;
+                height: 4px;
+                margin-top: 10px;
+                background-color: var(--main);
+            }
+
+            p {
+                font-size: 24px;
+                text-align: center;
+                margin-top: 13px;
+            }
+        }
+
+        .wonders_wrapper {
+            margin-top: 67px;
+            // display: grid;
+            gap: 40px;
+            display: grid;
+            grid-template-columns: repeat(1fr);
+            flex-direction: column;
+            align-items: center;
+            width: fit-content;
+
+            @media (min-width: 768px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media (min-width: 1588px) {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .wonder_wrapper_item {
+                position: relative;
+                width: fit-content;
+
+                // img {
+                //     width: 290px;
+                // }
+
+                .text_wonder {
+                    position: absolute;
+                    background-color: #10191e88;
+                    bottom: 0;
+                    padding: 10px 20px;
+                    width: 100%;
+
+                    svg {
+                        height: 24px;
+                        width: 24px;
+
+                        path {
+                            fill: var(--text);
+                        }
+                    }
+
+                    .header_wonder {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        h2 {
+                            margin-left: 4px;
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            font-size: 24px;
+                        }
+                    }
+
+                    .content_wonder {
+                        font-size: 16px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 
@@ -222,7 +326,7 @@ body {
                 position: relative;
 
                 .path {
-                    fill: #fff;
+                    fill: var(--text);
                     position: absolute;
                     top: 10px;
                     left: 15px;
@@ -233,14 +337,14 @@ body {
                     width: 500px;
                     height: 40px;
                     background-color: #ffffff30;
-                    color: #fff;
+                    color: var(--text);
                     padding-left: 50px;
                     outline: 0;
                     border: none;
                     border-radius: 20px;
 
                     &::placeholder {
-                        color: #fff;
+                        color: var(--text);
                     }
                 }
             }
@@ -256,28 +360,31 @@ body {
                 .title {
                     position: relative;
 
-                    .wrapper {
-                        position: relative;
+                    .wrapper_content {
+                        .wrapper_title {
+                            position: relative;
 
-                        h1 {
-                            flex-direction: row;
-                            align-items: center;
-                            font-size: 100px;
+                            h1 {
+                                flex-direction: row;
+                                align-items: center;
+                                font-size: 100px;
 
-                            span {
-                                margin-left: 45px;
+                                span {
+                                    margin-left: 45px;
+                                }
+                            }
+
+                            h2 {
+                                position: absolute;
+                                display: flex;
+                                bottom: 25px;
+                                left: 100px;
+                                font-weight: 300;
+                                text-transform: uppercase;
                             }
                         }
-
-                        h2 {
-                            position: absolute;
-                            display: flex;
-                            bottom: 25px;
-                            left: 100px;
-                            font-weight: 300;
-                            text-transform: uppercase;
-                        }
                     }
+
                 }
 
                 .links {
@@ -318,12 +425,59 @@ body {
 
             .destak {
                 .title {
-                    .wrapper {}
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .wrapper_content {
+                        position: relative;
+                        width: 1000px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .index_slider {
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            left: 0;
+                            padding: 0;
+                            margin: 0;
+
+                            .item_slider_index {
+                                margin-bottom: 10px;
+                                margin-top: 5px;
+
+                                span {
+                                    font-weight: bold;
+                                    font-size: 15px;
+                                }
+
+                                .bar {
+                                    height: 0;
+                                }
+
+                                &.active {
+                                    color: var(--main);
+                                    margin-bottom: 0;
+
+                                    .bar {
+                                        margin-top: 2px;
+                                        margin-bottom: 8px;
+                                        height: 100px;
+                                        width: 2px;
+                                        background-color: #FFF;
+                                        margin: 0 auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .links {
                     .link-item {
-                        color: #FFF;
+                        color: var(--text);
 
                         h3 {
                             font-size: 28px;
@@ -331,16 +485,16 @@ body {
 
                         svg {
                             path {
-                                fill: #FFF;
+                                fill: var(--text);
                             }
                         }
 
                         &.selected {
-                            color: #F2B822;
+                            color: var(--main);
 
                             svg {
                                 path {
-                                    fill: #F2B822;
+                                    fill: var(--main);
                                 }
                             }
                         }
