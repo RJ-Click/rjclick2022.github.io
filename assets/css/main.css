@@ -345,6 +345,99 @@ body section.wonders .wonders_wrapper .wonder_wrapper_item .text_wonder .content
   font-size: 16px;
   width: 100%;
 }
+body section.info {
+  padding: 48px;
+  padding-top: 0;
+}
+body section.info .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section.info .title h2 {
+  font-size: 44px;
+  margin-top: 23px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  body section.info .title h2 {
+    font-size: 48px;
+  }
+}
+body section.info .title hr {
+  border: 0;
+  width: 100px;
+  height: 4px;
+  margin-top: 10px;
+  background-color: var(--main);
+}
+body section.info .title p {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 13px;
+}
+body section.info .info_items_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 85px;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 1200px) {
+  body section.info .info_items_wrapper {
+    flex-direction: row;
+  }
+}
+body section.info .info_items_wrapper .info_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+@media (min-width: 768px) {
+  body section.info .info_items_wrapper .info_item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body section.info .info_items_wrapper .info_item .img {
+    margin-right: 50px;
+  }
+  body section.info .info_items_wrapper .info_item p {
+    width: fit-content;
+  }
+}
+@media (min-width: 900px) {
+  body section.info .info_items_wrapper .info_item {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1200px) {
+  body section.info .info_items_wrapper .info_item {
+    margin-top: 0;
+    margin-right: 50px;
+  }
+  body section.info .info_items_wrapper .info_item:last-child {
+    margin-right: 0;
+  }
+  body section.info .info_items_wrapper .info_item .img {
+    height: 185px;
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+  }
+}
+body section.info .info_items_wrapper .info_item .img {
+  margin-bottom: 38px;
+}
+body section.info .info_items_wrapper .info_item p {
+  text-align: center;
+  font-size: 24px;
+}
+body section.info .info_items_wrapper .info_item:first-child {
+  margin-top: 0;
+}
 
 @media (min-width: 768px) {
   body .show-desktop {

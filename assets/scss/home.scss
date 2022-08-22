@@ -298,6 +298,108 @@ body {
             }
         }
     }
+
+    section.info {
+        padding: 48px;
+        padding-top: 0;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-size: 44px;
+                margin-top: 23px;
+                text-align: center;
+
+                @media (min-width: 768px) {
+                    font-size: 48px;
+                }
+            }
+
+            hr {
+                border: 0;
+                width: 100px;
+                height: 4px;
+                margin-top: 10px;
+                background-color: var(--main);
+            }
+
+            p {
+                font-size: 24px;
+                text-align: center;
+                margin-top: 13px;
+            }
+        }
+
+        .info_items_wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 85px;
+            max-width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+
+            @media (min-width: 1200px) {
+                flex-direction: row;
+            }
+
+            .info_item {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 80px;
+
+                @media (min-width: 768px) {
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .img {
+                        margin-right: 50px;
+                    }
+
+                    p {
+                        width: fit-content;
+                    }
+                }
+
+                @media (min-width: 900px) {
+                    flex-direction: column;
+                }
+
+                @media (min-width: 1200px) {
+                    margin-top: 0;
+                    margin-right: 50px;
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    .img {
+                        height: 185px;
+                        display: flex;
+                        align-items: center;
+                        margin-right: 0;
+                    }
+                }
+
+                .img {
+                    margin-bottom: 38px;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 24px;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
 }
 
 
