@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 100px;
+            height: 100px;
+            margin: 20% auto;
+            border: solid 2px #333;
+            transition-duration: 0.5s;
+            animation: correr 2.5s infinite backwards;
+        }
+
+        @keyframes correr {
+            from {
+                transform: translateX(0px);
+            }
+
+            to {
+                transform: translateX(600px)rotate(360deg);
+                border-radius: 50%;
+            }
+        }
+
+        #container:hover {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+</body>
+
+</html>
