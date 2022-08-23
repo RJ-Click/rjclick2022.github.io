@@ -433,6 +433,20 @@ body {
                 text-align: center;
                 margin-top: 13px;
             }
+
+            &.desktop_title_showcase {
+                display: none;
+            }
+
+            @media (min-width: 1200px) {
+                &.desktop_title_showcase {
+                    display: flex;
+                }
+
+                &.mobile_title_showcase {
+                    display: none;
+                }
+            }
         }
 
         .images_wrapper {
@@ -527,8 +541,14 @@ body {
             display: flex;
             flex-direction: row;
 
+            .title {
+                align-items: flex-start;
+                margin-bottom: 90px;
+            }
+
             .images_wrapper {
                 min-width: 60%;
+                margin-right: 80px;
             }
         }
     }

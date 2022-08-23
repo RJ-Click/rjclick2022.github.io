@@ -365,6 +365,17 @@ body section.showcase .title p {
   text-align: center;
   margin-top: 13px;
 }
+body section.showcase .title.desktop_title_showcase {
+  display: none;
+}
+@media (min-width: 1200px) {
+  body section.showcase .title.desktop_title_showcase {
+    display: flex;
+  }
+  body section.showcase .title.mobile_title_showcase {
+    display: none;
+  }
+}
 body section.showcase .images_wrapper {
   display: flex;
   flex-direction: column;
@@ -432,8 +443,13 @@ body section.showcase .showcase_text button {
     display: flex;
     flex-direction: row;
   }
+  body section.showcase .title {
+    align-items: flex-start;
+    margin-bottom: 90px;
+  }
   body section.showcase .images_wrapper {
     min-width: 60%;
+    margin-right: 80px;
   }
 }
 
