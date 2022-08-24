@@ -32,6 +32,18 @@ if (arrow) {
 }
 let reference = 1;
 ////////////////////////////////////////////////////////
+/*
+    setInterval(()=>{
+         ++reference;
+        slider(reference, ".slider-items", 4);
+        if (document.querySelector(".arrow")) {
+            document.querySelector(".arrow").style.display = "flex";
+        }
+        if(reference >= 5){ reference = 1 }
+    },4000)
+
+    */
+
 if (document.querySelector(".left-arrow")) {
   document.querySelector(".left-arrow").addEventListener("click", (e) => {
     ++reference;
